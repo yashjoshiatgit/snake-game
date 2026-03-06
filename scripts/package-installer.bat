@@ -3,7 +3,7 @@ setlocal
 
 set TYPE=%1
 if "%TYPE%"=="" set TYPE=app-image
-set APP_NAME=VegetarianSnake
+set APP_NAME=SnakeGame
 set VERSION=1.0.0
 
 call scripts\build-jar.bat
@@ -15,10 +15,10 @@ jpackage ^
   --name %APP_NAME% ^
   --input build\libs ^
   --main-jar %APP_NAME%-%VERSION%.jar ^
-  --main-class com.vegsnake.Main ^
+  --main-class com.snakegame.Main ^
   --type %TYPE% ^
   --dest build\installer ^
-  --vendor VEG_SNAKE ^
+  --vendor SnakeGame ^
   --app-version %VERSION%
 if errorlevel 1 exit /b 1
 
